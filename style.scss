@@ -1,0 +1,560 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+$brandColor: #09f5c4;
+$textColor: white;
+$smallColor: #a0a0a0;
+$bgColor: #cb47a0;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  transition: all 0.4s;
+}
+body {
+  overflow-x: hidden;
+  background-color: #0a0c26;
+}
+// .sticky {
+//   transition: all 0.4s;
+//   background-color: #53535305;
+//   backdrop-filter: blur(1em);
+// }
+header {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 14vh;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.4s;
+    &::after {
+      content: "";
+      position: absolute;
+      left: -25%;
+      top: -5%;
+      width: 60%;
+      height: 70vh;
+      background-color: #cb479f2c;
+      border-radius: 50%;
+      filter: blur(10em);
+      z-index: -2;
+    }
+    .burger {
+      cursor: pointer;
+      display: none;
+      div {
+        width: 24px;
+        height: 2px;
+        background-color: white;
+        margin: 7px 0;
+        transition: all 0.4s ease-in-out;
+      }
+      .line2 {
+        margin: 6px 0;
+      }
+    }
+    ul {
+      margin: 0;
+      width: 70%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      z-index: 99999;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: $smallColor;
+          font-size: 16px;
+          letter-spacing: 2px;
+          &:hover {
+            color: $textColor;
+          }
+        }
+      }
+      button {
+        padding: 7px 25px;
+        border: none;
+        outline: none;
+        color: $textColor;
+        background: linear-gradient(90deg, $bgColor, rgb(106, 43, 255));
+      }
+    }
+  }
+}
+
+.home {
+  h1 {
+    color: $textColor;
+    span {
+      color: $brandColor;
+    }
+  }
+  p {
+    color: $smallColor;
+  }
+  .btn1 {
+    padding: 10px 25px;
+    border: none;
+    outline: none;
+    color: $textColor;
+    margin-right: 10px;
+    background: linear-gradient(90deg, $bgColor, rgb(106, 43, 255));
+  }
+  .btn2 {
+    padding: 6px 20px;
+    border: 1px solid $bgColor;
+    background: transparent;
+    border-top-color: $brandColor;
+    border-left-color: $brandColor;
+    color: $textColor;
+    &:hover {
+      border: 1px solid $brandColor;
+      border-top-color: $bgColor;
+      border-left-color: $bgColor;
+    }
+  }
+
+  .circle {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+  }
+
+  .bg2 {
+    position: absolute;
+    top: 0;
+    z-index: -9;
+    width: 100%;
+  }
+
+  .text {
+    transform: translateY(100px);
+    opacity: 0;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  .text2 {
+    transform: translateY(-100px);
+    opacity: 0;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+}
+
+.feedback {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: -25%;
+    top: -5%;
+    width: 60%;
+    height: 70vh;
+    background-color: #cb479f85;
+    border-radius: 50%;
+    filter: blur(10em);
+    z-index: -2;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    right: -25%;
+    top: -5%;
+    width: 60%;
+    height: 70vh;
+    background: #00ff8533;
+    border-radius: 50%;
+    filter: blur(10em);
+    z-index: -2;
+  }
+  .row {
+    background: #d4ecff4d;
+    backdrop-filter: blur(12px);
+    height: 238px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .col-md-3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h3 {
+        color: $textColor;
+        font-size: 61px;
+        font-weight: 500;
+      }
+      p {
+        color: $smallColor;
+        font-size: 25px;
+        line-height: 150%;
+      }
+    }
+  }
+}
+.more {
+  h1 {
+    color: $textColor;
+    font-size: 3em;
+    font-weight: bold;
+    span {
+      color: $brandColor;
+    }
+  }
+  p {
+    color: $smallColor;
+  }
+  button {
+    padding: 7px 25px;
+    border: none;
+    outline: none;
+    color: $textColor;
+    background: linear-gradient(90deg, $bgColor, rgb(106, 43, 255));
+  }
+}
+
+.collection {
+  h1 {
+    color: $textColor;
+    font-size: 3em;
+    span {
+      color: $brandColor;
+    }
+  }
+  p {
+    color: $smallColor;
+  }
+  button {
+    padding: 7px 25px;
+    border: none;
+    outline: none;
+    color: $textColor;
+    background: linear-gradient(90deg, $bgColor, rgb(106, 43, 255));
+  }
+
+  .box1 {
+    position: relative;
+    background: #2e2f404d;
+    backdrop-filter: blur(4px);
+    z-index: 1;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -10%;
+      left: 0;
+      transform: translate(50%, 50%);
+      background: #002e8360;
+      filter: blur(2em);
+      z-index: -3;
+      width: 50%;
+      height: 30%;
+    }
+    img {
+      transform: translateY(-40%);
+    }
+  }
+  .color2 {
+    &::after {
+      content: "";
+      position: absolute;
+      top: -10%;
+      left: 0;
+      transform: translate(50%, 50%);
+      background: #ffffff2a;
+      filter: blur(2em);
+      z-index: -3;
+      width: 50%;
+      height: 30%;
+    }
+  }
+  .color3 {
+    &::after {
+      content: "";
+      position: absolute;
+      top: -10%;
+      left: 0;
+      transform: translate(50%, 50%);
+      background: #9900ff2a;
+      filter: blur(2em);
+      z-index: -3;
+      width: 50%;
+      height: 30%;
+    }
+  }
+  h4 {
+    color: $textColor;
+  }
+}
+
+.shop {
+  h1 {
+    color: $textColor;
+    span {
+      color: $brandColor;
+    }
+  }
+  button {
+    padding: 10px 50px;
+    border: none;
+    outline: none;
+    color: $textColor;
+    background: rgba(128, 128, 128, 0.247);
+    transition: all 2s;
+    &:hover {
+      background: linear-gradient(90deg, $bgColor, rgb(106, 43, 255));
+    }
+  }
+  h5 {
+    color: $textColor;
+  }
+  h4 {
+    margin: 0;
+    color: $brandColor;
+  }
+  p {
+    margin: 0;
+    color: $smallColor;
+  }
+  .btn2 {
+    padding: 10px 25px;
+    border: none;
+    outline: none;
+    color: $textColor;
+    margin-right: 10px;
+    transition: all 0.5s;
+    background: linear-gradient(90deg, $bgColor, rgb(43, 47, 255));
+  }
+  .col-md-3 {
+    padding: 20px;
+    background: #2e2f404d;
+    backdrop-filter: blur(4px);
+    i {
+      color: $brandColor;
+      font-size: 2em;
+    }
+  }
+  .active {
+    padding: 7px 25px;
+    border: none;
+    outline: none;
+    color: $textColor;
+    background: linear-gradient(90deg, $bgColor, rgb(106, 43, 255));
+  }
+}
+.brand {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: -25%;
+    top: -10%;
+    width: 60%;
+    height: 70vh;
+    background-color: #cb479f85;
+    border-radius: 50%;
+    filter: blur(10em);
+    z-index: -2;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    right: -25%;
+    top: -5%;
+    width: 60%;
+    height: 70vh;
+    background: #00ff8533;
+    border-radius: 50%;
+    filter: blur(10em);
+    z-index: -2;
+  }
+  .row {
+    background: #d4ecff4d;
+    backdrop-filter: blur(12px);
+    height: 238px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.artist {
+  h1 {
+    color: $textColor;
+    font-weight: bold;
+    span {
+      color: $brandColor;
+    }
+  }
+  .col-md-3 {
+    padding: 20px;
+    background: #2e2f404d;
+    backdrop-filter: blur(4px);
+    .logoOne {
+      transform: translateY(-40%);
+    }
+    h3 {
+      color: $textColor;
+    }
+    p {
+      color: $smallColor;
+    }
+    button {
+      padding: 7px 25px;
+      border: none;
+      outline: none;
+      color: $textColor;
+      background: linear-gradient(90deg, $bgColor, rgb(106, 43, 255));
+    }
+  }
+  .bgColorShadow {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      border-radius: 50%;
+      background-color: #09f5c65d;
+      z-index: -3;
+      filter: blur(10em);
+      width: 100%;
+      height: 50vh;
+    }
+  }
+}
+.Nft {
+  .container {
+    position: relative;
+  }
+  img {
+    position: absolute;
+    top: -60%;
+    z-index: -99;
+  }
+  h1 {
+    color: $textColor;
+    font-weight: bold;
+    span {
+      color: $brandColor;
+    }
+  }
+  p {
+    color: $smallColor;
+  }
+  button {
+    padding: 7px 25px;
+    border: none;
+    outline: none;
+    color: $textColor;
+    background: linear-gradient(90deg, $bgColor, rgb(106, 43, 255));
+  }
+}
+
+footer {
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #cb479f4b, #00ff843b);
+    height: 12vh;
+    backdrop-filter: blur(12px);
+  }
+  a {
+    text-decoration: none;
+    color: $smallColor;
+    transition: all 0.4s;
+    &:hover {
+      color: $textColor;
+    }
+  }
+}
+
+@media (max-width: 668px) {
+  header{
+    nav {
+      justify-content: space-between;
+      padding: 0 5%;
+      .burger {
+        display: block;
+      }
+      .nav-links {
+        position: absolute;
+        width: 50%;
+        height: 86vh;
+        top: 14vh;
+        right: -6%;
+        z-index: 9999;
+        background-color: #53535305;
+        backdrop-filter: blur(1em);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        li {
+          margin: 8% 0;
+        }
+      }
+      .nav-active {
+        transform: translateX(0%);
+      }
+    }
+  }
+
+  .feedback {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: -25%;
+      top: -5%;
+      width: 60%;
+      height: 70vh;
+      background-color: #cb479f85;
+      border-radius: 50%;
+      filter: blur(10em);
+      z-index: -2;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      right: -25%;
+      top: -5%;
+      width: 60%;
+      height: 70vh;
+      background: #00ff8533;
+      border-radius: 50%;
+      filter: blur(10em);
+      z-index: -2;
+    }
+    .row {
+      .col-md-3 {
+        h3 {
+          color: $textColor;
+          font-size: 24px;
+          font-weight: 500;
+        }
+        p {
+          color: $smallColor;
+          font-size: 18px;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+}
+
+.toggle .line1 {
+  width: 30px;
+  transform: rotate(45deg) translateY(14px);
+}
+.toggle .line2 {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.toggle .line3 {
+  width: 30px;
+  transform: rotate(315deg) translateY(-14px);
+}
