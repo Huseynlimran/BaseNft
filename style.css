@@ -9,7 +9,7 @@
   transition: all 0.4s;
 }
 
-body {
+body, html {
   overflow-x: hidden;
   background-color: #0a0c26;
 }
@@ -533,12 +533,13 @@ header nav ul button {
 .Nft img {
   position: absolute;
   top: -60%;
-  z-index: -99;
+  z-index: 0;
 }
 
 .Nft h1 {
   color: white;
   font-weight: bold;
+  z-index: 99;
 }
 
 .Nft h1 span {
@@ -547,6 +548,7 @@ header nav ul button {
 
 .Nft p {
   color: #a0a0a0;
+  z-index: 99;
 }
 
 .Nft button {
@@ -556,6 +558,7 @@ header nav ul button {
   color: white;
   background: -webkit-gradient(linear, left top, right top, from(#cb47a0), to(#6a2bff));
   background: linear-gradient(90deg, #cb47a0, #6a2bff);
+  z-index: 99;
 }
 
 footer .row {
@@ -667,6 +670,30 @@ footer a:hover {
     color: #a0a0a0;
     font-size: 18px;
     line-height: 150%;
+  }
+  nav::after {
+    display: none;
+  }
+  .feedback::after {
+    display: none;
+  }
+  .feedback::before {
+    display: none;
+  }
+  .brand::after {
+    display: none;
+  }
+  .brand::before {
+    display: none;
+  }
+  .collection .box1::after {
+    display: none;
+  }
+  .collection .color2::after {
+    display: none;
+  }
+  .collection .color3::after {
+    display: none;
   }
 }
 
