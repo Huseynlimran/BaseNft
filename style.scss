@@ -12,7 +12,7 @@ $bgColor: #cb47a0;
   font-family: "Oswald", sans-serif;
   transition: all 0.4s;
 }
-body {
+body,html {
   overflow-x: hidden;
   background-color: #0a0c26;
 }
@@ -431,17 +431,20 @@ header {
   img {
     position: absolute;
     top: -60%;
-    z-index: -99;
+    z-index: 0;
   }
   h1 {
     color: $textColor;
     font-weight: bold;
+    z-index: 99;
     span {
       color: $brandColor;
     }
   }
   p {
     color: $smallColor;
+    z-index: 99;
+
   }
   button {
     padding: 7px 25px;
@@ -449,6 +452,8 @@ header {
     outline: none;
     color: $textColor;
     background: linear-gradient(90deg, $bgColor, rgb(106, 43, 255));
+    z-index: 99;
+
   }
 }
 
@@ -541,6 +546,44 @@ footer {
           font-size: 18px;
           line-height: 150%;
         }
+      }
+    }
+  }
+  nav{
+    &::after{
+      display: none;
+    }
+  }
+  .feedback{
+    &::after{
+      display: none;
+    }
+    &::before{
+      display: none;
+    }
+  }
+  .brand{
+    &::after{
+      display: none;
+    }
+    &::before{
+      display: none;
+    }
+  }
+  .collection{
+    .box1{
+      &::after{
+        display: none;
+      }
+    }
+    .color2{
+      &::after{
+      display: none;
+      }
+    }
+    .color3{
+      &::after{
+      display: none;
       }
     }
   }
