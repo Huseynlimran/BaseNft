@@ -118,16 +118,15 @@ header {
     }
   }
 
-  .circle {
-    position: absolute;
-    left: 0;
-    z-index: -1;
+
+  .bg1{
+    position: relative;
   }
 
   .bg2 {
     position: absolute;
     top: 0;
-    z-index: -9;
+    z-index: 1;
     width: 100%;
   }
 
@@ -139,7 +138,15 @@ header {
   .text2 {
     transform: translateY(-100px);
     opacity: 0;
+    z-index: 8;
     clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  .circle {
+    position: absolute;
+    left:0;
+    top: 40%;
+    z-index: 1;
+    transform: translateY(-50%);
   }
 }
 
@@ -489,7 +496,7 @@ footer {
         width: 50%;
         height: 86vh;
         top: 14vh;
-        right: -6%;
+        right: 0px;
         z-index: 9999;
         background-color: #53535305;
         backdrop-filter: blur(1em);
@@ -584,6 +591,13 @@ footer {
     .color3{
       &::after{
       display: none;
+      }
+    }
+  }
+  .artist{
+    .bgColorShadow{
+      &::after{
+        display: none;
       }
     }
   }
