@@ -22,7 +22,6 @@ let hg = gsap.timeline({
     start:"top 90%",
     end: () =>`+=${document.querySelector(".box").offsetHeight}`,
     scrub:1,
-    markers:true,
     toggleActions :"restart reverse none none"
   }
 })
@@ -32,7 +31,6 @@ let hg = gsap.timeline({
 hg.from(".box",{y:50,opacity:0,stagger:.3})
 
 ScrollTrigger.create({
-  markers:true,
   start: "top 0%",
   end: "bottom 3%",
   toggleClass:{targets: "header", className: "sticky"},
