@@ -15,6 +15,29 @@ tl.to(".text",{"clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",opacit
 tl.to(".text2",{"clip-path": "polygon(1% 0%, 100% 0%, 100% 100%, 0% 100%)","z-index":"-99",opacity:1,y:0,duration:2},"-=2.5");
 tl.fromTo(".circle",{ease: "elastic.out(1, 0.3)",opacity:0,scale:.4},{opacity:1,scale:1,rotate:"210deg",ease: "elastic.out(1, 0.3)"},"-=2.1")
 
+
+let hg = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.box',
+    start:"top 90%",
+    end: () =>`+=${document.querySelector(".box").offsetHeight}`,
+    scrub:1,
+    markers:true,
+    toggleActions :"restart reverse none none"
+  }
+})
+
+
+
+hg.from(".box",{y:50,opacity:0,stagger:.3})
+
+ScrollTrigger.create({
+  markers:true,
+  start: "top 0%",
+  end: "bottom 3%",
+  toggleClass:{targets: "header", className: "sticky"},
+})
+
 // const navBar = document.querySelector("header")
 // console.log(navBar)
 
