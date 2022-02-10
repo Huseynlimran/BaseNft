@@ -16,20 +16,34 @@ body,html {
   overflow-x: hidden;
   background-color: #0a0c26;
 }
-// .sticky {
-//   transition: all 0.4s;
-//   background-color: #53535305;
-//   backdrop-filter: blur(1em);
-// }
+.cursor{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+.sticky {
+  transition: all 0.4s;
+  background-color: #3030305d;
+  backdrop-filter: blur(1em);
+}
 header {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 14vh;
+    width: 84%;
+    margin: 0 auto;
     transform: translateY(-100%);
     opacity: 0;
     transition: all 0.4s;
+
     &::after {
       content: "";
       position: absolute;
@@ -486,6 +500,8 @@ footer {
 @media (max-width: 668px) {
   header{
     nav {
+      width: 100%;
+      
       justify-content: space-between;
       padding: 0 5%;
       .burger {
