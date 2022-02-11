@@ -43,7 +43,6 @@ header {
     transform: translateY(-100%);
     opacity: 0;
     transition: all 0.4s;
-
     &::after {
       content: "";
       position: absolute;
@@ -501,7 +500,6 @@ footer {
   header{
     nav {
       width: 100%;
-      
       justify-content: space-between;
       padding: 0 5%;
       .burger {
@@ -509,10 +507,10 @@ footer {
       }
       .nav-links {
         position: absolute;
-        width: 50%;
+        width: 70%;
         height: 86vh;
         top: 14vh;
-        right: 0px;
+        right: -13px;
         z-index: 9999;
         background-color: #53535305;
         backdrop-filter: blur(1em);
