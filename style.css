@@ -635,10 +635,10 @@ footer a:hover {
   }
   header nav .nav-links {
     position: absolute;
-    width: 50%;
+    width: 70%;
     height: 86vh;
     top: 14vh;
-    right: 0px;
+    right: -13px;
     z-index: 9999;
     background-color: #53535305;
     -webkit-backdrop-filter: blur(1em);
